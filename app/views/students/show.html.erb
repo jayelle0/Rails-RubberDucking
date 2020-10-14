@@ -1,0 +1,10 @@
+<h1> <%= @student.name%> </h1> 
+
+<h5> <%= @student.name%>'s Ducks </h5> 
+<%if @student.ducks == []%>
+    No duckies yet :(
+<ul><%else %>
+<%@student.ducks.each do |duck|%>
+<li> <%= duck.name%> </li>
+<%end%></ul>
+<%end%>
